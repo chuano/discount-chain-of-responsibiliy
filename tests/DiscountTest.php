@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use Discount\AmountAndUnitsRule;
-use Discount\Discount;
 use Discount\Rule;
+use Discount\Discount;
 use PHPUnit\Framework\TestCase;
 
 class DiscountTest extends TestCase
@@ -15,10 +14,10 @@ class DiscountTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->rule = new AmountAndUnitsRule(15, 300, 50);      // (15%) MÁS DE 300€ Y 50 UNIDADES
-        $this->rule->chain(new AmountAndUnitsRule(12, 0, 50));  // (12%) MÁS DE 50 UNIDADES
-        $this->rule->chain(new AmountAndUnitsRule(10, 0, 30));  // (10%) MÁS DE 30 UNIDADES
-        $this->rule->chain(new AmountAndUnitsRule(5, 100, 0));  // (5%)  MÁS DE 100€
+        $this->rule = new Rule(15, 300, 50);      // (15%) MÁS DE 300€ Y 50 UNIDADES
+        $this->rule->chain(new Rule(12, 0, 50));  // (12%) MÁS DE 50 UNIDADES
+        $this->rule->chain(new Rule(10, 0, 30));  // (10%) MÁS DE 30 UNIDADES
+        $this->rule->chain(new Rule(5, 100, 0));  // (5%)  MÁS DE 100€
     }
 
     /**
