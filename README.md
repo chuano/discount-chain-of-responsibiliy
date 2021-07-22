@@ -2,6 +2,8 @@
 
 Academic purpouse discount calculator using the chain of responsibility pattern.
 
+Spanish post in [Patrón cadena de responsabilidad en PHP](https://chuano.dev/cadena-de-responsabilidad/)
+
 Implemented tests for these cases:
 
 - Return 15% of discount given more than 300€ amount and more than 50 units.
